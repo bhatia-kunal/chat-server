@@ -1,0 +1,20 @@
+type Mutation {
+  addUser(name: String!, friends: [Int], contact: String!, email: String!): User!
+  sendMessage(to: Int!, from: Int!, text: String!): Message!
+  addGroup(name: String, members: [Int]): Group!
+}
+
+type Query {
+  getAllUser: [User]!
+  getUser(id: Int!): User!
+  getAllMessages: [Message]!
+  getMessage(text: String!): Message!
+  getAllGroups: [Group]!
+  getGroup(id: Int!): Group!
+}
+
+type Subscription {
+  userAdded: User!
+  messageSent: Message!
+  groupAdded: Group!
+}

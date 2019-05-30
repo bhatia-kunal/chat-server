@@ -1,0 +1,5 @@
+type Message {
+  to: Int!
+  from: Int!
+  text: String!
+}
